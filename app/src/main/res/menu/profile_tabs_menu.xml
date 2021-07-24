@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_tab_liked"
+        android:icon="@drawable/ic_liked"
+        android:title="@string/navigation_tab_liked"
+        />
+
+    <item
+        android:id="@+id/navigation_tab_created"
+        android:icon="@drawable/star_icon"
+        android:title="@string/navigation_tab_created" />
+</menu>

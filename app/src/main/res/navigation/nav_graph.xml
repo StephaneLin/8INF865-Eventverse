@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_home">
+
+    <fragment
+        android:id="@+id/parameterProfileFragment"
+        android:name="com.boulin.eventverse.ui.fragments.profile.ProfileParametersFragment"
+        android:label="fragment_parameter_profile"
+        tools:layout="@layout/fragment_profile_parameters" />
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.boulin.eventverse.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_ViewMoreEvents"
+            app:destination="@id/navigation_events" >
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_events"
+        android:name="com.boulin.eventverse.ui.fragments.EventsFragment"
+        android:label="fragment_events"
+        tools:layout="@layout/fragment_events" >
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.boulin.eventverse.ui.fragments.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_organizerProfile_to_parameterProfileFragment"
+            app:destination="@id/parameterProfileFragment"
+            app:popUpTo="@id/navigation_profile"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/horizontalGallery"
+        android:name="com.boulin.eventverse.ui.fragments.HorizontalGallery"
+        android:label="fragment_horizontal_gallery"
+        tools:layout="@layout/fragment_horizontal_gallery" />
+</navigation>

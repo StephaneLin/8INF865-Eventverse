@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_events"
+    app:startDestination="@id/navigation_tab_soon">
+    <fragment
+        android:id="@+id/navigation_tab_for_me"
+        android:name="com.boulin.eventverse.ui.fragments.EventsForMeFragment"
+        android:label="fragment_events_for_me"
+        tools:layout="@layout/fragment_events_for_me" />
+    <fragment
+        android:id="@+id/navigation_tab_near"
+        android:name="com.boulin.eventverse.ui.fragments.EventsNearFragment"
+        android:label="fragment_events_near"
+        tools:layout="@layout/fragment_events_near" />
+    <fragment
+        android:id="@+id/navigation_tab_soon"
+        android:name="com.boulin.eventverse.ui.fragments.EventsSoonFragment"
+        android:label="fragment_events_soon"
+        tools:layout="@layout/fragment_events_soon" />
+</navigation>

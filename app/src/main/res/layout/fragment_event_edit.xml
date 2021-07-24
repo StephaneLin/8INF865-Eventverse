@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.EventEditFragment">
+
+    <ProgressBar
+        android:id="@+id/event_details_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginVertical="8dp"/>
+
+    <TextView
+        android:id="@+id/event_details_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ScrollView
+        android:id="@+id/event_details_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/eventPicture"
+                android:layout_width="303dp"
+                android:layout_height="118dp"
+                android:layout_marginStart="54dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="54dp"
+                android:src="@drawable/fui_idp_button_background_facebook" />
+
+            <Button
+                android:id="@+id/addPicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="9dp"
+                android:text="@string/choose_picture_button_label" />
+
+            <TextView
+                android:id="@+id/eventName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/eventName" />
+
+            <EditText
+                android:id="@+id/eventNameInput"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:ems="10"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/startingDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/startDate" />
+
+                <TextView
+                    android:id="@+id/startingTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="98dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/startTime" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/eventStartDateInput"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="29dp"
+                    android:ems="10"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/eventStartTimeInput"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="29dp"
+                    android:ems="10"
+                    android:inputType="time" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/endDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/endDate" />
+
+                <TextView
+                    android:id="@+id/endTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="115dp"
+                    android:layout_marginTop="15dp"
+                    android:text="@string/endTime" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/eventEndDateInput"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="29dp"
+                    android:ems="10"
+                    android:inputType="date" />
+
+                <EditText
+                    android:id="@+id/eventEndTimeInput"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="29dp"
+                    android:ems="10"
+                    android:inputType="time" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/eventLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/eventLocation" />
+
+            <EditText
+                android:id="@+id/eventLocationName"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:ems="10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/eventLocationLongitude"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="29dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"/>
+
+                <EditText
+                    android:id="@+id/eventLocationLatitude"
+                    android:layout_width="155dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="29dp"
+                    android:ems="10"
+                    android:inputType="numberDecimal"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/eventTarget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/eventTarget" />
+
+            <Spinner
+                android:id="@+id/eventTargetInput"
+                android:layout_width="340dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="30dp" />
+
+            <TextView
+                android:id="@+id/eventDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/eventDescription" />
+
+            <EditText
+                android:id="@+id/eventDescriptionInput"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:ems="10" />
+
+            <Button
+                android:id="@+id/validateButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/EventEditButton" />
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

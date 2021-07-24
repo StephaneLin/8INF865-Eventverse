@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_tab_soon"
+        android:icon="@drawable/time_icon"
+        android:title="@string/soon_tab_menu_label"
+        />
+    <item
+        android:id="@+id/navigation_tab_near"
+        android:icon="@drawable/location_icon"
+        android:title="@string/near_tab_menu_label"
+        />
+    <item
+        android:id="@+id/navigation_tab_for_me"
+        android:icon="@drawable/ic_public"
+        android:title="@string/for_me_tab_menu_label"
+        />
+</menu>
